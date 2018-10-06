@@ -5,8 +5,19 @@
 #ifndef ASSIGNMENT_1_1_BITS_H
 #define ASSIGNMENT_1_1_BITS_H
 
-
+#include <iostream>
 class Bits {
+
+public:
+    Bits();
+    void print();
+
+
+private:
+    unsigned char * bits; //chars take up smallest size (an octet)
+    int size, n; //n size of array
+
+
 
 };
 
