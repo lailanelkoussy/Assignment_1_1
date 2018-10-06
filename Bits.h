@@ -10,13 +10,17 @@ class Bits {
 
 public:
     Bits();
-    void print();
+    ~Bits();
+    int operator[](int a); // bits are numbered from 0 to size-1
 
 
 private:
     unsigned char * bits; //chars take up smallest size (an octet)
     int size, n; //n size of array
 
+};
+
+class Bytes {
 
 
 };

@@ -5,6 +5,7 @@ using namespace std;
 int main() {
 
     Bits a;
-    a.print();
+
+    cout<<a[7];
 
 }
