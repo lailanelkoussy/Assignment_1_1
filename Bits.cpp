@@ -1,4 +1,11 @@
 //
+// Created by Laila Nasser ElKoussy 900160812 on 10/7/18.
+//
+
+#include "Bits.h"
+
+
+//
 // Created by Laila Nasser ElKoussy 900160812 on 10/5/18.
 //
 
@@ -62,13 +69,7 @@ Bits::~Bits() {
     delete bits;
 }
 
-void Bits::print() {
-
-    for (int i = 0; i < n; i++)
-        cout << bits[i];
-}
-
-int Bits::operator[](int a) {
+int Bits::operator[](int a) const {
     int temp;
     unsigned char bit;
 
@@ -84,4 +85,12 @@ int Bits::operator[](int a) {
         temp/=2;
 
     return temp%2;
+}
+
+std::ostream& operator << (std::ostream& o, const Bits&a) {
+
+    for (int i = (a.getSize()-1); i>=0; i--)
+        o<<a[i];
+    return o;
+
 }
