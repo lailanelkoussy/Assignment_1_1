@@ -11,14 +11,14 @@ class Bits {
 public:
     Bits();
     ~Bits();
-    Bits(int&);
+    Bits(int);
     int operator[](int a) const;  // bits are numbered from 0 to size-1 only allows reading, no writing
     int getSize() const {return size;}
 
 
 private:
     unsigned char * bits; //chars take up smallest size (an octet)
-    int size, n; //n size of array
+    int size, n; //n size of array, size number of bits
 
 
     friend class Bytes;
