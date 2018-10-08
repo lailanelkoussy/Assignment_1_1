@@ -9,17 +9,20 @@
 
 class Bytes {
 public:
-    Bytes(int &max, int x=0);
+    Bytes();
     ~Bytes();
-    void add(int&);
-    void remove(int &);
-    int find (int&); //returns index of found item, if not found returns -1
+    void add(int); //accepts a decimal number
+    void remove(int);
+    bool find (int);
+    void printSet();
+    int getSize(){ return size; }
 
 private:
     Bits* bytes;
-    int size, maxsize;
+    int size;
+    const int maxsize = 32;
 
-    void order();
+    friend class Bits;
 
 };
 
